@@ -1,23 +1,27 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+
+<div class="row">
+  <div class="col-xs-3 col-md-3">
+    <input type="text" class="form-control" placeholder="Name" ng-model="newdata.name"></input>
+  </div>
+  <div class="col-xs-3 col-md-3">
+    <input type="text" class="form-control" placeholder="City" ng-model="newdata.city"></input>
+  </div>
+  <div class="col-xs-3 col-md-3">
+    <input type="text" class="form-control" placeholder="County" ng-model="newdata.county"></input>
+  </div>
+  <div class="col-xs-3 col-md-3">
+    <button class="btn btn-success" ng-click="save()">Save New Data</button>
+  </div>
+  <div class="col-xs-14 col-md-14">
+    <input type="text" class="form-control" placeholder="Search DataSet" ng-model="searchText"></input>
+  </div> 
 </div>
-
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+<div class="row">
+  <table ng-table class="table">
+      <tr ng-repeat="row in data | filter:searchText" >
+          <td data-title="'Name'">{{row.name | uppercase }}</td>
+          <td data-title="'City'">{{row.city | uppercase }} </td>
+          <td data-title="'County'">{{row.county | uppercase}}</td>
+      </tr>    
+  </table>
 </div>
