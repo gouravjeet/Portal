@@ -35,11 +35,12 @@ angular.module('portalApp')
     	$scope.data=tagobj;
     	console.log($scope.data);
     	$scope.newdata={};
+    	$scope.getData();
     	})
 	    .error(function(){
 	    	console.log('error');
 	    });
-	    $scope.getData();
+	    
     };
     
 
