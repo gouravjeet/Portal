@@ -30,6 +30,7 @@ body {
 }
 .table-row th{
   border-right: thin solid grey;
+  background-color: #444040;
 }
 
 /* Custom page footer */

@@ -8,7 +8,7 @@
  * Controller of the portalApp
  */
 angular.module('portalApp')
-  .controller('MainCtrl', function ($scope,$resource,$http,ngTableParams, $filter) {
+  .controller('MainCtrl', function ($scope,$resource,$http,ngTableParams,$filter) {
 
     $scope.data=[];
     $scope.newdata={};
@@ -18,7 +18,7 @@ angular.module('portalApp')
 	    success(function(tagobj){
 	    	$scope.data=tagobj;
 	    	console.log($scope.data.length);
-
+          //$scope.tableParams.total($scope.data.length);
 	    })
 	    .error(function(){
 	    	console.log('error');
@@ -97,21 +97,40 @@ angular.module('portalApp')
         });
 
     };
-     $scope.tableParams = new ngTableParams({
+    var count=1;
+    $scope.tableParams = new ngTableParams({
         page: 1,            // Show first page
         count: 10,        // Count per page
         sorting: {
          name: 'asc'     // initial sorting
         }
     }, {
-        total: $scope.data.length, // length of data
+        total: 0, // length of data
         getData: function($defer, params) {
-
+          $scope.getData();
           var orderedData = params.sorting() ?
                               $filter('orderBy')($scope.data, params.orderBy()) : $scope.data;
-          $scope.data=orderedData;
+          console.log($scope.data.length);
+          console.log('Hi');
+          $scope.data=orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count());
+          params.total(orderedData.length);
           $defer.resolve($scope.data);
-            $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
         }
     });
+    $scope.nextPage=function(){
+      console.log($scope.data.length);
+      console.log(count);
+
+      if(count<(($scope.data.length/10))){
+        count++;
+        $scope.tableParams.page(count);
+      }
+
+
+    };
+    $scope.previousPage=function(){
+      if(count>1)
+        count--;
+      $scope.tableParams.page(count);
+    };
   });

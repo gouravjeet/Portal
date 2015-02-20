@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b75e6f0b-25b2-4250-b509-211826a9ce27" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Portal_node_modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/datafeed/Users.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/datafeed/Users.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/pager.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.css" afterPath="$PROJECT_DIR$/app/styles/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.html" afterPath="$PROJECT_DIR$/app/views/main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/main.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Portal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,8 +34,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.7636364" vertical-offset="0" max-vertical-offset="1539">
-              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            <state vertical-scroll-proportion="-8.981818" vertical-offset="760" max-vertical-offset="1596">
+              <caret line="66" column="74" selection-start-line="66" selection-start-column="74" selection-end-line="66" selection-end-column="74" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -50,26 +46,56 @@
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/styles/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-90.74074" vertical-offset="0" max-vertical-offset="2825">
-              <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
+            <state vertical-scroll-proportion="-12.962963" vertical-offset="300" max-vertical-offset="2850">
+              <caret line="26" column="27" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.1390376" vertical-offset="2898" max-vertical-offset="3528">
-              <caret line="24" column="93" selection-start-line="24" selection-start-column="93" selection-end-line="24" selection-end-column="93" />
+            <state vertical-scroll-proportion="-3.2" vertical-offset="2280" max-vertical-offset="4344">
+              <caret line="103" column="18" selection-start-line="103" selection-start-column="18" selection-end-line="103" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#4;n#tr#0;n#div#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#5;n#tr#0;n#div#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#td#6;n#tr#0;n#div#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#checkbox#0;n#td#6;n#tr#0;n#div#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#2;n#td#6;n#tr#0;n#div#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#checkbox#0;n#th#6;n#tr#0;n#div#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#th#6;n#tr#0;n#div#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#th#6;n#tr#0;n#div#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#td#4;n#tr#0;n#tbody#0;n#table#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#td#5;n#tr#0;n#tbody#0;n#table#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#td#6;n#tr#0;n#tbody#0;n#table#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#checkbox#0;n#td#6;n#tr#0;n#tbody#0;n#table#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#2;n#td#6;n#tr#0;n#tbody#0;n#table#1;n#!!top" expanded="true" />
+                <marker date="1424473748000" expanded="true" signature="2380:2569" placeholder="{...}" />
+                <marker date="1424473748000" expanded="true" signature="2756:2947" placeholder="{...}" />
+                <marker date="1424473748000" expanded="true" signature="3138:3317" placeholder="{...}" />
+                <marker date="1424473748000" expanded="true" signature="3488:3671" placeholder="{...}" />
+                <marker date="1424473748000" expanded="true" signature="3848:4041" placeholder="{...}" />
+                <marker date="1424473748000" expanded="true" signature="4234:4423" placeholder="{...}" />
+                <marker date="1424473748000" expanded="true" signature="4614:4799" placeholder="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ng-table.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bower_components/ng-table/dist/ng-table.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.30666667" vertical-offset="639" max-vertical-offset="2556">
+              <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tables.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bower_components/bootstrap/less/tables.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="5.102041" vertical-offset="448" max-vertical-offset="4320">
+              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,8 +103,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.962963" vertical-offset="1675" max-vertical-offset="2337">
-              <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+            <state vertical-scroll-proportion="-14.666667" vertical-offset="1732" max-vertical-offset="2698">
+              <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -87,42 +113,9 @@
       <file leaf-file-name="ng-table.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bower_components/ng-table/dist/ng-table.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2340" max-vertical-offset="14595">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1424041133000" expanded="true" signature="5432:5659" placeholder="/** @ngdoc method ...*/" />
-                <marker date="1424041133000" expanded="true" signature="6071:6365" placeholder="/** @ngdoc method ...*/" />
-                <marker date="1424041133000" expanded="true" signature="6535:6776" placeholder="/** @ngdoc method ...*/" />
-                <marker date="1424041133000" expanded="true" signature="7474:7836" placeholder="/** @ngdoc method ...*/" />
-                <marker date="1424041133000" expanded="true" signature="18623:22189" placeholder="/** ngTable: Table + Angular JS ...*/" />
-                <marker date="1424041133000" expanded="true" signature="22331:22698" placeholder="/** @ngdoc object ...*/" />
-                <marker date="1424041133000" expanded="true" signature="22883:25452" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="25633:25746" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="25721:25742" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="25842:25940" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="26214:26242" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="26772:26969" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="27090:27125" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="27434:27531" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="27851:27878" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="28790:28908" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="28978:32922" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="32101:32127" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="32182:32261" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="32327:32778" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="32440:32457" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="32488:32728" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="32529:32702" placeholder="{&quot;id&quot;: ''...}" />
-                <marker date="1424041133000" expanded="true" signature="32820:32878" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="33092:33144" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="33308:33420" placeholder="{&quot;ng-table-pagination&quot;: 'params'...}" />
-                <marker date="1424041133000" expanded="true" signature="34237:34310" placeholder="/** @ngdoc directive ...*/" />
-                <marker date="1424041133000" expanded="true" signature="34458:34548" placeholder="{&quot;params&quot;: '=ngTablePagination'...}" />
-                <marker date="1424041133000" expanded="true" signature="34754:34773" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="34980:35354" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="34973:35064" placeholder="{...}" />
-                <marker date="1424041133000" expanded="true" signature="35131:35236" placeholder="{&quot;ng-include&quot;: 'templateUrl'...}" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="23636" max-vertical-offset="24325">
+              <caret line="181" column="30" selection-start-line="181" selection-start-column="30" selection-end-line="181" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -147,11 +140,13 @@
       <list>
         <option value="$PROJECT_DIR$/app/datafeed/Users.json" />
         <option value="$PROJECT_DIR$/app/datafeed/Users.js" />
-        <option value="$PROJECT_DIR$/app/styles/main.css" />
         <option value="$PROJECT_DIR$/app/scripts/app.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/views/table-template.html" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/views/main.html" />
+        <option value="$PROJECT_DIR$/app/styles/main.css" />
+        <option value="$PROJECT_DIR$/bower_components/ng-table/dist/ng-table.css" />
       </list>
     </option>
   </component>
@@ -312,9 +307,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1272" />
-    <option name="height" value="731" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -370,6 +364,112 @@
               <option name="myItemId" value="bower_components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng-table" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ng-table" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -382,6 +482,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Portal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -431,10 +549,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="editorconfig.notification" value="Applied .editorconfig settings" />
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="SearchEverywhereHistoryKey" value="table.less&#9;FILE&#9;file:///Users/gouravjeet/Documents/Portal/bower_components/bootstrap/less/tables.less" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -485,8 +605,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1272" height="731" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -494,12 +614,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22062351" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2660842" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32829046" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -546,55 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="756">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/ng-table/dist/ng-table.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11790">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1424041133000" expanded="true" signature="5432:5659" placeholder="/** @ngdoc method ...*/" />
-            <marker date="1424041133000" expanded="true" signature="6071:6365" placeholder="/** @ngdoc method ...*/" />
-            <marker date="1424041133000" expanded="true" signature="6535:6776" placeholder="/** @ngdoc method ...*/" />
-            <marker date="1424041133000" expanded="true" signature="7474:7836" placeholder="/** @ngdoc method ...*/" />
-            <marker date="1424041133000" expanded="true" signature="18623:22189" placeholder="/** ngTable: Table + Angular JS ...*/" />
-            <marker date="1424041133000" expanded="true" signature="22331:22698" placeholder="/** @ngdoc object ...*/" />
-            <marker date="1424041133000" expanded="true" signature="22883:25452" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="25633:25746" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="25721:25742" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="25842:25940" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="26214:26242" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="26772:26969" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="27090:27125" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="27434:27531" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="27851:27878" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="28790:28908" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="28978:32922" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="32101:32127" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="32182:32261" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="32327:32778" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="32440:32457" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="32488:32728" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="32529:32702" placeholder="{&quot;id&quot;: ''...}" />
-            <marker date="1424041133000" expanded="true" signature="32820:32878" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="33092:33144" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="33308:33420" placeholder="{&quot;ng-table-pagination&quot;: 'params'...}" />
-            <marker date="1424041133000" expanded="true" signature="34237:34310" placeholder="/** @ngdoc directive ...*/" />
-            <marker date="1424041133000" expanded="true" signature="34458:34548" placeholder="{&quot;params&quot;: '=ngTablePagination'...}" />
-            <marker date="1424041133000" expanded="true" signature="34754:34773" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="34980:35354" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="34973:35064" placeholder="{...}" />
-            <marker date="1424041133000" expanded="true" signature="35131:35236" placeholder="{&quot;ng-include&quot;: 'templateUrl'...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bower_components/ng-table/dist/ng-table.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06531204" vertical-offset="0" max-vertical-offset="689">
@@ -616,26 +687,50 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.css">
+    <entry file="file://$PROJECT_DIR$/app/views/pager.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-90.74074" vertical-offset="0" max-vertical-offset="2825">
-          <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.42035398" vertical-offset="0" max-vertical-offset="678">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="756">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/ng-table/dist/ng-table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="23636" max-vertical-offset="24325">
+          <caret line="181" column="30" selection-start-line="181" selection-start-column="30" selection-end-line="181" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/bootstrap/less/tables.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.102041" vertical-offset="448" max-vertical-offset="4320">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.962963" vertical-offset="1675" max-vertical-offset="2337">
-          <caret line="108" column="0" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        <state vertical-scroll-proportion="-14.666667" vertical-offset="1732" max-vertical-offset="2698">
+          <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7636364" vertical-offset="0" max-vertical-offset="1539">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        <state vertical-scroll-proportion="-8.981818" vertical-offset="760" max-vertical-offset="1596">
+          <caret line="66" column="74" selection-start-line="66" selection-start-column="74" selection-end-line="66" selection-end-column="74" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -644,16 +739,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.1390376" vertical-offset="2898" max-vertical-offset="3528">
-          <caret line="24" column="93" selection-start-line="24" selection-start-column="93" selection-end-line="24" selection-end-column="93" />
+        <state vertical-scroll-proportion="-3.2" vertical-offset="2280" max-vertical-offset="4344">
+          <caret line="103" column="18" selection-start-line="103" selection-start-column="18" selection-end-line="103" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#button#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#4;n#tr#0;n#div#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#5;n#tr#0;n#div#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#td#6;n#tr#0;n#div#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#checkbox#0;n#td#6;n#tr#0;n#div#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#2;n#td#6;n#tr#0;n#div#0;n#tbody#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#checkbox#0;n#th#6;n#tr#0;n#div#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#th#6;n#tr#0;n#div#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#th#6;n#tr#0;n#div#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#4;n#tr#0;n#tbody#0;n#table#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#5;n#tr#0;n#tbody#0;n#table#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#td#6;n#tr#0;n#tbody#0;n#table#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#checkbox#0;n#td#6;n#tr#0;n#tbody#0;n#table#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#td#6;n#tr#0;n#tbody#0;n#table#1;n#!!top" expanded="true" />
+            <marker date="1424473748000" expanded="true" signature="2380:2569" placeholder="{...}" />
+            <marker date="1424473748000" expanded="true" signature="2756:2947" placeholder="{...}" />
+            <marker date="1424473748000" expanded="true" signature="3138:3317" placeholder="{...}" />
+            <marker date="1424473748000" expanded="true" signature="3488:3671" placeholder="{...}" />
+            <marker date="1424473748000" expanded="true" signature="3848:4041" placeholder="{...}" />
+            <marker date="1424473748000" expanded="true" signature="4234:4423" placeholder="{...}" />
+            <marker date="1424473748000" expanded="true" signature="4614:4799" placeholder="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.962963" vertical-offset="300" max-vertical-offset="2850">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/ng-table/dist/ng-table.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30666667" vertical-offset="639" max-vertical-offset="2556">
+          <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
