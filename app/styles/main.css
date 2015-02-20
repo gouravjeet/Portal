@@ -23,6 +23,14 @@ body {
   line-height: 40px;
   padding-bottom: 19px;
 }
+.table-row{
+  background-color: #444040;
+  color: white;
+  font-family: Arial;
+}
+.table-row th{
+  border-right: thin solid grey;
+}
 
 /* Custom page footer */
 .footer {
@@ -32,9 +40,9 @@ body {
 }
 
 /* Customize container */
-@media (min-width: 768px) {
+@media (min-width: 40%) {
   .container {
-    max-width: 730px;
+    max-width: 100%;
   }
 }
 .container-narrow > hr {
@@ -78,4 +86,22 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+input[type="checkbox"]:checked + label{
+  background-color: #444040 ;
+  color: #f5f5f5;
+  display:inline-block;
+
+}
+
+.btn-user{
+  background-color: #444040 ;
+  color: #f5f5f5;
+}
+.table-striped > tbody > tr:nth-child(odd) > td {
+  background-color: white;
+}
+
+.table-striped > tbody > tr:nth-child(even) > td {
+  background-color: #f5f5f5;
 }
