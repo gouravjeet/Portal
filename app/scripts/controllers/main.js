@@ -107,14 +107,18 @@ angular.module('portalApp')
     }, {
         total: 0, // length of data
         getData: function($defer, params) {
-          $scope.getData();
+          //$scope.getData();
           var orderedData = params.sorting() ?
                               $filter('orderBy')($scope.data, params.orderBy()) : $scope.data;
           console.log($scope.data.length);
-          console.log('Hi');
-          $scope.data=orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count());
-          params.total(orderedData.length);
+         $scope.data=orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count());
+         params.total(orderedData.length);
+         // $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
           $defer.resolve($scope.data);
+          //$scope.data=orderedData;
+          //$defer.resolve($scope.data);
+          //$defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
+
         }
     });
     $scope.nextPage=function(){
@@ -125,12 +129,13 @@ angular.module('portalApp')
         count++;
         $scope.tableParams.page(count);
       }
-
-
     };
     $scope.previousPage=function(){
-      if(count>1)
+      if(count>1){
         count--;
-      $scope.tableParams.page(count);
+        $scope.tableParams.page(count);
+      }
+
+
     };
   });

@@ -1,8 +1,8 @@
 
-
+<div>
 <div class="row">
   <div class="col-xs-3 col-md-3">
-    <input type="text" class="form-control" placeholder="Filter" ng-model="searchText">  </input>
+    <input type="text" class="form-control" placeholder="Filter" ng-model="searchText"/>
   </div>
 </div>
 <br>
@@ -10,7 +10,7 @@
 
 </div>
 <div class="row">
-  <div class="col-xs-12 col-md-11">
+  <div class="col-xs-11 col-md-11">
 
     <p><a ng-click="previousPage()"><< Previous {{tableParams.count()}} users
 
@@ -21,45 +21,45 @@
     </p>
   </div>
 
-  <div class="col-xs-12 col-md-1">
+  <div class="col-xs-1 col-md-1">
     <button type="button" style="border: thin solid black" class="btn btn-default btn-sm" ng-click="row.$edit = false;save(newdata)">
       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
       Add user</button>
   </div>
 </div>
 <br>
-<table class="table table-striped">
+<table class="table table-one">
 
-  <div class="row">
-    <tr >
+    <tr>
+      <td class="col-xs-2 col-md-2">
+        <input type="text" class="form-control" required placeholder="Enter a last name" ng-model="newdata.lastName"/>
+      </td>
       <th class="col-xs-2 col-md-2">
-        <input type="text" class="form-control" required placeholder="Enter a last name" ng-model="newdata.lastName"></input>
-      </th>
-      <th class="col-xs-2 col-md-2">
-        <input type="text" class="form-control" placeholder="Enter a first name" ng-model="newdata.firstName"></input>
+        <input type="text" class="form-control" placeholder="Enter a first name" ng-model="newdata.firstName"/>
       </th>
       <th class="col-xs-1 col-md-1">
-        <input type="text" class="form-control" placeholder="Age" ng-model="newdata.age"></input>
+        <input type="text" class="form-control" placeholder="Age" ng-model="newdata.age"/>
       </th>
       <th class="col-xs-3 col-md-3">
-        <input type="text" class="form-control" placeholder="email@yourdomain.com" ng-model="newdata.email"></input>
+        <input type="text" class="form-control" placeholder="email@yourdomain.com" ng-model="newdata.email"/>
       </th>
       <th class="col-xs-1 col-md-1"></th>
       <th class="col-xs-1 col-md-1"></th>
       <th class="col-xs-2 col-md-2">
-        <checkbox style="float: left;" ng-model="newdata.active" ></checkbox>
-        <button style="float: none;" type="button" class="btn btn-user btn-sm" ng-click="row.$edit = false">
-          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-        </button>
+
+
         <button style="float: right;" type="button" class="btn btn-user btn-sm" ng-click="row.$edit = false;edit(row)">
           <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
         </button>
+        <button style="float: right;" type="button" class="btn btn-user btn-sm" ng-click="row.$edit = false">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+        <checkbox style="float: right;" ng-model="newdata.active" ></checkbox>
       </th>
     </tr>
-</div>
 </table>
 
-  <table ng-table="tableParams" class="table table-striped">
+  <table ng-table="tableParams" template-pagination="custom/pager" class="table table-striped table-row">
 
       <!--<tr class="table-row">-->
         <!--<th class="col-xs-2 col-md-2 sortable" ng-class="{-->
@@ -169,7 +169,7 @@
   </div>
   </div>
 </div>
-
+</div>
 
 
 
