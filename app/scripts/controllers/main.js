@@ -13,6 +13,7 @@ angular.module('portalApp')
     $scope.data=[];
     $scope.newdata={};
     $scope.newdata={};
+    $scope.userValidity=true;
     $scope.blankObj={
       lastName:'',
       firstName:'',
@@ -36,38 +37,39 @@ angular.module('portalApp')
     // This function is adding data into mongoDB database as a new dataset
     // whenever a user enters information in input box
     $scope.addNewUser=function(newUser){
-      var userValidity=true;
-      if(newUser==undefined){
-        userValidity=false;
 
+      if(newUser==undefined){
+        $scope.userValidity=false;
+        $scope.errorMessage='Please Enter Valid User';
       }
 
       // Checking for Email Validation
-      if( userValidity && !newUser.hasOwnProperty('lastName')){
+      if( $scope.userValidity && !newUser.hasOwnProperty('lastName')){
         $scope.errorMessage='Lastname is necessary';
-        userValidity=false;
+        $scope.userValidity=false;
       }
-      if( userValidity && !newUser.hasOwnProperty('firstName') ){
+      if($scope.userValidity && !newUser.hasOwnProperty('firstName') ){
         $scope.errorMessage='Firstname is necessary';
-        userValidity=false;
+        $scope.userValidity=false;
       }
-      if( userValidity && !newUser.hasOwnProperty('email')){
+      if( $scope.userValidity && !newUser.hasOwnProperty('email')){
         $scope.errorMessage='Email is necessary';
-        userValidity=false;
+        $scope.userValidity=false;
       }
-      if(userValidity && !newUser.hasOwnProperty('active')){
+      console.log('YYY');
+      if($scope.userValidity && !newUser.hasOwnProperty('active')){
         newUser.active=false;
       }
-
+      console.log('YYY');
       var user=$scope.data;
 
-      if(userValidity){
+      if($scope.userValidity==true){
+
         $scope.errorMessage="";
         for(var i in user){
           console.log(user[i].email);
           if(user[i].email==newUser.email){
-            userValidity=false;
-
+            $scope.userValidity=false;
             $scope.errorMessage='Email Already Exists';
             newUser.email="";
             break;
@@ -89,7 +91,7 @@ angular.module('portalApp')
             console.log('error');
           });
       }
-        $scope.newdata=$scope.blankObj;
+      $scope.newdata=$scope.blankObj;
     };
     $scope.delete=function(row){
       $scope.id=row._id.$oid;
@@ -147,7 +149,6 @@ angular.module('portalApp')
     }, {
         total: $scope.data, // length of data
         getData: function($defer, params) {
-          //$scope.getData();
           var orderedData = params.sorting() ?
                               $filter('orderBy')($scope.data, params.orderBy()) : $scope.data;
           console.log(orderedData);
@@ -155,7 +156,7 @@ angular.module('portalApp')
          $scope.data=orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count());
          params.total(orderedData.length);
          // $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
-          $defer.resolve($scope.data);
+          //$defer.resolve($scope.data);
           //$scope.data=orderedData;
           //$defer.resolve($scope.data);
           //$defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
@@ -168,14 +169,18 @@ angular.module('portalApp')
 
       if(count<(($scope.data.length/10))){
         count++;
-        $scope.tableParams.page(count);
+        $scope.tableParams.page($scope.tableParams.page()+1);
       }
+      console.log($scope.tableParams.page());
     };
-    $scope.previousPage=function(){
+    $scope.previousPage=function(hi){
+      console.log(hi);
       if(count>1){
         count--;
-        $scope.tableParams.page(count);
+        $scope.tableParams.page($scope.tableParams.page()-1);
       }
+      console.log($scope.data.length);
+      console.log($scope.tableParams.page());
 
 
     };

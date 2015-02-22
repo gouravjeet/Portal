@@ -14,20 +14,13 @@
 </div>
 <div class="row">
   <div class="col-xs-11 col-md-11">
-
     <p><a ng-click="previousPage()"><< Previous {{tableParams.count()}} users
-
     </a> <strong>Showing {{ tableParams.page()}}-{{tableParams.page()* tableParams.count()}} out of  {{ data.length}} users |</strong>
       <a ng-click="nextPage()"> Next {{tableParams.count()}} users >>
-
       </a>
     </p>
   </div>
-
   <div class="col-xs-1 col-md-1">
-    <!--<button type="button" style="float:right; border: thin solid black;" class="btn btn-default btn-sm" ng-click="row.$edit = false;addNewUser(editdata)">-->
-      <!--<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>-->
-      <!--Add user</button>-->
   </div>
 </div>
 <br>
@@ -72,7 +65,7 @@
     </form>
 </table>
 
-  <table ng-table="tableParams" template-pagination="custom/pager" class="table table-striped table-row">
+  <table ng-table="tableParams" class="table table-striped table-row">
   <tbody>
       <tr ng-repeat="row in data | filter:searchText" >
           <td class="col-xs-2 col-md-2" data-title="'Last Name'" sortable="'lastName'">
@@ -114,6 +107,7 @@
             <button type="button" class="btn btn-user btn-xs" ng-click="delete(row)">
               <span class="glyphicon glyphicon-remove-sign"></span>
             </button>
+
           </td>
       </tr>
     </tbody>
