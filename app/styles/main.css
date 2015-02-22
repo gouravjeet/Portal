@@ -110,3 +110,26 @@ input[type="checkbox"]:checked + label{
 .table-striped > tbody > tr:nth-child(even) > td {
   background-color: #f5f5f5;
 }
+#input_container {
+  position:relative;
+  padding:0;
+  margin:0;
+  background:#ddd;
+}
+#input {
+  height:30px;
+  margin:0;
+  padding-left: 30px;
+}
+#input_img {
+  position:absolute;
+  bottom:8px;
+  left:10px;
+  width:10px;
+  height:10px;
+}
+
+.error{
+  float: left;
+  color: darkred;
+}

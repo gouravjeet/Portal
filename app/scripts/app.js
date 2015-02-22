@@ -18,7 +18,9 @@ angular
     'ngSanitize',
     'ngTouch',
     'ngTable',
-    'ui.checkbox'
+    'ui.checkbox',
+    'mgcrea.ngStrap'
+
   ])
   .config(function ($routeProvider) {
     $routeProvider

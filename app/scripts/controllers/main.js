@@ -12,6 +12,14 @@ angular.module('portalApp')
 
     $scope.data=[];
     $scope.newdata={};
+    $scope.newdata={};
+    $scope.blankObj={
+      lastName:'',
+      firstName:'',
+      age:'',
+      email:''
+    };
+    $scope.errorMessage='';
     // This function is fetching data from mongoDB database
     $scope.getData=function(){
     	$http.get('https://api.mongolab.com/api/1/databases/dara/collections/data?apiKey=hQd3U3G0xCnfVikoy53-g6nG8J7smyhL').
@@ -27,37 +35,61 @@ angular.module('portalApp')
     $scope.getData();
     // This function is adding data into mongoDB database as a new dataset
     // whenever a user enters information in input box
-    $scope.save=function(newUser){
-      // Checking for Email Validation
-      console.log($scope.data);
+    $scope.addNewUser=function(newUser){
       var userValidity=true;
-      var user=$scope.data;
-      for(var i in user){
-        console.log(user[i].email);
-        if(user[i].email==newUser.email){
-          userValidity=false;
-          alert("Email Already Exists");
-          newUser.email="";
-          break;
-        }
+      if(newUser==undefined){
+        userValidity=false;
+
       }
-      if(userValidity==true){
+
+      // Checking for Email Validation
+      if( userValidity && !newUser.hasOwnProperty('lastName')){
+        $scope.errorMessage='Lastname is necessary';
+        userValidity=false;
+      }
+      if( userValidity && !newUser.hasOwnProperty('firstName') ){
+        $scope.errorMessage='Firstname is necessary';
+        userValidity=false;
+      }
+      if( userValidity && !newUser.hasOwnProperty('email')){
+        $scope.errorMessage='Email is necessary';
+        userValidity=false;
+      }
+      if(userValidity && !newUser.hasOwnProperty('active')){
+        newUser.active=false;
+      }
+
+      var user=$scope.data;
+
+      if(userValidity){
+        $scope.errorMessage="";
+        for(var i in user){
+          console.log(user[i].email);
+          if(user[i].email==newUser.email){
+            userValidity=false;
+
+            $scope.errorMessage='Email Already Exists';
+            newUser.email="";
+            break;
+          }
+        }
         var date = new Date();
         $scope.newdata.createDate=date;
         $scope.newdata.editDate=date;
         var newdata = JSON.stringify($scope.newdata);
+
         $http.post('https://api.mongolab.com/api/1/databases/dara/collections/data?apiKey=hQd3U3G0xCnfVikoy53-g6nG8J7smyhL',newdata)
           .success(function(tagobj){
             $scope.data=tagobj;
-            console.log($scope.data);
             $scope.newdata={};
             $scope.getData();
+            console.log('New user Created');
           })
           .error(function(){
             console.log('error');
           });
       }
-
+        $scope.newdata=$scope.blankObj;
     };
     $scope.delete=function(row){
       $scope.id=row._id.$oid;
@@ -71,23 +103,30 @@ angular.module('portalApp')
           console.log('error');
         });
     };
-    $scope.edit=function(row){
+    $scope.revertChanges=function(){
+
+
+    };
+    $scope.editUser=function(user){
+        $scope.editdata=user;
+    };
+    $scope.saveUser=function(row){
       $scope.id=row._id.$oid;
       var date = new Date();
       console.log(row);
-      $scope.newdata=row;
-      $scope.newdata.editDate=date;
-      console.log($scope.newdata);
+      $scope.editdata=row;
+      $scope.editdata.editDate=date;
+      console.log($scope.editdata);
       //var newdata = JSON.stringify($scope.newdata);
       $http.put('https://api.mongolab.com/api/1/databases/dara/collections/data/' +
           $scope.id +'?apiKey=hQd3U3G0xCnfVikoy53-g6nG8J7smyhL',{
-        'lastName':$scope.newdata.lastName,
-        'firstName':$scope.newdata.firstName,
-        'age':$scope.newdata.age,
-        'email':$scope.newdata.email,
-        'createDate':$scope.newdata.createDate,
-        'editDate':$scope.newdata.editDate,
-        'active':$scope.newdata.active
+        'lastName':$scope.editdata.lastName,
+        'firstName':$scope.editdata.firstName,
+        'age':$scope.editdata.age,
+        'email':$scope.editdata.email,
+        'createDate':$scope.editdata.createDate,
+        'editDate':$scope.editdata.editDate,
+        'active':$scope.editdata.active
       })
         .success(function(){
 
@@ -95,6 +134,7 @@ angular.module('portalApp')
         .error(function(){
           console.log('error');
         });
+      $scope.editdata=$scope.blankObj;
 
     };
     var count=1;
@@ -105,11 +145,12 @@ angular.module('portalApp')
          name: 'asc'     // initial sorting
         }
     }, {
-        total: 0, // length of data
+        total: $scope.data, // length of data
         getData: function($defer, params) {
           //$scope.getData();
           var orderedData = params.sorting() ?
                               $filter('orderBy')($scope.data, params.orderBy()) : $scope.data;
+          console.log(orderedData);
           console.log($scope.data.length);
          $scope.data=orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count());
          params.total(orderedData.length);
