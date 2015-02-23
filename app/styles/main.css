@@ -133,4 +133,6 @@ input[type="checkbox"]:checked + label{
   float: left;
   color: darkred;
 }
+a{
 
+}
