@@ -57,11 +57,10 @@ angular.module('portalApp')
         $scope.errorMessage = 'Email is necessary';
         $scope.userValidity = false;
       }
-      console.log('YYY');
+
       if ($scope.userValidity && !newUser.hasOwnProperty('active')) {
         newUser.active = false;
       }
-      console.log('YYY');
       var user = $scope.data;
       if ($scope.userValidity == true) {
         $scope.errorMessage = "";
@@ -93,6 +92,7 @@ angular.module('portalApp')
       $scope.newdata = $scope.blankObj;
       console.log($scope.newdata);
     };
+    // This will delete the Row after cross button is clicked
     $scope.delete = function (row) {
       $scope.id = row._id.$oid;
       $http.delete('https://api.mongolab.com/api/1/databases/dara/collections/data/' +
@@ -111,14 +111,14 @@ angular.module('portalApp')
     $scope.editUser = function (user) {
       $scope.editdata = user;
     };
+
+    // This function will be executed when User will click on Save button at each row.
     $scope.saveUser = function (row) {
       $scope.id = row._id.$oid;
       var date = new Date();
       console.log(row);
       $scope.editdata = row;
       $scope.editdata.editDate = date;
-      console.log($scope.editdata);
-      //var newdata = JSON.stringify($scope.newdata);
       $http.put('https://api.mongolab.com/api/1/databases/dara/collections/data/' +
       $scope.id + '?apiKey=hQd3U3G0xCnfVikoy53-g6nG8J7smyhL', {
         'lastName': $scope.editdata.lastName,
@@ -137,6 +137,8 @@ angular.module('portalApp')
       $scope.editdata = $scope.blankObj;
     };
     var count = 1;
+
+    // This function will decide the grid of the table
     $scope.tableParams = new ngTableParams({
       page: 1,            // Show first page
       count: 10,        // Count per page
@@ -152,14 +154,14 @@ angular.module('portalApp')
         console.log($scope.data.length);
         $scope.data = orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count());
         params.total(orderedData.length);
-        // $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
         //$defer.resolve($scope.data);
         //$scope.data=orderedData;
         //$defer.resolve($scope.data);
         //$defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
-
+        // I have commented this code because This will be helpful in future in resolving grid bugs
       }
     });
+    // This function will be executed when user will click on nextPage Button
     $scope.nextPage = function () {
       if (count < (($scope.data.length / 10))) {
         count++;
@@ -167,6 +169,7 @@ angular.module('portalApp')
       }
       console.log($scope.tableParams.page());
     };
+    // This function will be executed when user will click on previous Page Button
     $scope.previousPage = function (hi) {
       console.log(hi);
       if (count > 1) {
